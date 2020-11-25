@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: 'region/dist/'
+  publicPath: '/region/dist/'
 };
