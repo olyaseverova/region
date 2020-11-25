@@ -1,0 +1,19 @@
+.home-improvement {
+    .home-wrapper-top::after {
+        background-image: url("../img/improvement-products.jpg");
+    }
+
+    .home-content {
+        .home-headline {
+            width: 985px;
+        }
+
+        .p {
+            width: 614px;
+        }
+
+        // .arrows-list .arrows-list-item:first-of-type .router-link-active {
+        //     background-image: url("../img/normal-arrow.svg");
+        // }
+    }
+}

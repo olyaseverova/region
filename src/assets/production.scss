@@ -1,0 +1,79 @@
+.production {
+    .products-list {
+        width: 339px;
+        margin: 0 auto;
+        padding: 0;
+        
+        @media (min-width: $desktop-width) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            width: 1156px;
+            margin: 0 0 92px 0;
+        }
+        
+        .products-list-item {
+            width: 340px;
+            height: 275px;
+            margin: 0 auto;
+            
+            background-size: 275px 275px;
+            background-repeat: no-repeat;
+            background-position: 50% 0;
+            background-image: url("../img/product1.png");
+            
+            @media (min-width: $desktop-width) {
+                display: block;
+                width: 332px;
+                height: 332px;
+                margin: 0 0 26px 0;
+                padding: 257px 0 0 0;
+                background-size: 332px 332px;
+            }
+
+            .products {
+                font-size: 0;
+
+                @media (min-width: $desktop-width) {
+                    height: 75px;
+                    padding: 23px 25px;
+
+                    color: $white;
+                    font-size: 20px;
+                    font-weight: 700;
+                    background: rgba(49, 49, 49, 0.39);
+                }
+            }
+
+            .arrow-button {
+                margin: 37% 0 0 0;
+
+                &:last-of-type {
+                    float: right;
+                    margin: -7% 0 0 0;
+                }
+            }
+
+            &:nth-of-type(2) {
+                background-image: url("../img/product2.png");
+            }
+            &:nth-of-type(3) {
+                background-image: url("../img/product3.png");
+            }
+            &:nth-of-type(4) {
+                background-image: url("../img/product4.png");
+            }
+            &:nth-of-type(5) {
+                background-image: url("../img/product5.png");
+            }
+            &:nth-of-type(6) {
+                background-image: url("../img/product6.png");
+            }
+
+            &:nth-last-child(-n + 3) {
+                margin: 0;
+            }
+        }
+    }
+}

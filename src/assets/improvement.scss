@@ -1,0 +1,107 @@
+.improvement .pages-links {
+    margin-left: 0;
+}
+
+.carousel-images-list {
+    position: relative;
+    display: flex;
+    width: 340px;
+    height: 275px;
+    margin: 0 auto;
+    padding: 0;
+
+    @media (min-width: $desktop-width) {
+        width: 1264px;
+        height: 279px;
+        padding: 0 134px;
+
+    }
+
+    .carousel-images-list-item {
+        width: 340px;
+        height: 275px;
+
+        @media (min-width: $desktop-width) {
+            display: block;
+            width: 264px;
+            height: 203px;
+            margin: 40px 0 0 0;
+            background: $bg-light-grey-gradient;
+        }
+
+        .arrow-button {
+            @media (min-width: $desktop-width) {
+                display: none;
+            }
+        }
+
+        .carousel-image {
+            display: block;
+            width: 275px;
+            height: 275px;
+            margin: 0 auto;
+
+            transition-duration: 800ms;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url("../img/improve-3.png");
+            
+            @media (min-width: $desktop-width) {
+                width: 100%;
+                height: 100%;
+                opacity: 0.5;
+            }
+        }
+
+        &:nth-of-type(2) .carousel-image {
+            background-image: url("../img/improve-1.png");
+        }
+
+        &:nth-of-type(3) .carousel-image {
+            background-image: url("../img/improve-2.png");
+        }
+    }
+
+    .item_img {
+        display: block;
+        width: 468px;
+        height: 279px;
+        margin: 0;
+
+        .carousel-image {
+            opacity: 1;
+        }
+
+        .arrow-button {
+            display: block;
+            position: absolute;
+            
+            top: 50%;
+            left: 0;
+            
+            transform: rotate(90deg);
+            background-image: url("../img/arrow-down.png");
+            
+            @media (min-width: $desktop-width) {
+                width: 98px;
+                height: 16px;
+                transform: rotate(-180deg);
+                background-image: url("../img/normal-arrow.svg");
+                
+                &:hover {
+                    background-image: url("../img/hover-arrow.svg");
+                }
+            }
+
+            &:last-of-type {
+                left: 100%;
+                transform: translateX(-100%) rotate(-90deg);
+
+                @media (min-width: $desktop-width) {
+                    transform: translateX(-100%) rotate(0deg);
+                }
+            }
+
+        }
+    }
+}

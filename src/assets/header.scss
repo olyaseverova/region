@@ -1,0 +1,207 @@
+header {
+    position: relative;
+    display: block;
+    height: 50px;
+    padding: 13px 14px 0 0;
+    
+    @media (min-width: $desktop-width) {
+        height: 93px;
+        padding: 0;
+    }
+
+    .tabs-list {
+        position: absolute;
+        height: auto;
+        width: 100%;
+        z-index: 10;
+        margin: 0;
+        padding: 0;
+
+        top: 46px;
+        background-color: $bg-grey-f3;
+        
+        @media (min-width: $desktop-width) {
+            position: static;
+            display: flex;
+            justify-content: space-between;
+            height: 93px;
+
+            top: 0;
+            margin: 0;
+            padding: 0 27px;
+        }
+
+        .tabs-list-item {
+            height: 56px;
+            border-bottom: 1px solid $bg-grey;
+
+            @media (min-width: $desktop-width) {
+                position: relative;
+                display: block;
+                height: auto;
+                margin: 35px 0 0 0;
+                border: none;
+            }
+
+            @media (min-width: $desktop-width) {
+                &:first-of-type {
+                    margin: 20px 0 0 0;
+
+                    .tab-link {
+                        font-size: 0;
+                        width: 122px;
+                        height: 57px;
+                        background-size: 122px 57px;
+                        background-image: url("../img/logo-dark.svg");
+
+                        &:hover {
+                            background-image: url("../img/logo-light.svg");
+                        }
+                    }
+
+                    .router-link-active {
+                        &::after {
+                            display: none;
+                        }
+
+                        &:hover {
+                            background-image: url("../img/logo-dark.svg");
+                        }
+                    }
+                }
+            }
+
+            &:last-of-type {
+                margin-bottom: 13px;
+                border: none;
+
+                @media (min-width: $desktop-width) {
+                    margin: 35px 0 0 0;
+                }
+            }
+
+            .tab-link {
+                display: block;
+                height: 56px;
+                padding: 18px 0 0 54px;
+
+                @media (min-width: $desktop-width) {
+                    position: relative;
+                    z-index: 1;
+                    padding: 0;
+                    font-size: 20px;
+                    color: $bg-grey-31;
+                }
+
+                &:hover {
+                    color: $bg-yellow;
+                }
+            }
+            
+            .router-link-active {
+                background-color: $bg-yellow;
+                
+                @media (min-width: $desktop-width) {
+                    background-color: inherit;
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        z-index: -1;
+
+                        width: 119%;
+                        height: 5px;
+
+                        top: 14px;
+                        left: -1px;
+                        background-color: $bg-yellow;
+                    }
+                }
+
+                &:hover {
+                    cursor: default;
+                    color: $bg-grey-31;
+                }
+            }
+        }
+    }
+}
+
+.header-hamburger {
+    position: absolute;
+    left: 95%;
+    transform: translateX(-100%);
+    z-index: 10;
+}
+
+.hamburger {
+    position: relative;
+    // float: right;
+    width: 24px;
+    height: 24px;
+
+    @media (min-width: $desktop-width) {
+        display: none;
+    }
+}
+
+.hamburger .bar {
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 3px;
+    padding: 0;
+
+    border-radius: 4px;
+    background-color: $bg-yellow;
+    transition: all 0.4s ease-in-out;
+}
+
+.bar1 {
+    top: 0;
+}
+
+.bar2,
+.bar3 {
+    top: 10px;
+}
+
+.bar3 {
+    right: 0;
+}
+
+.bar4 {
+    bottom: 1px;
+}
+
+.hamburger3 .bar1 {
+    transform-origin: 5%;
+}
+
+.hamburger3 .bar4 {
+    transform-origin: 5%;
+}
+
+.checkbox:checked + label > .hamburger3 > .bar1 {
+    transform: rotate(45deg);
+    height: 3px;
+    width: 31px;
+}
+
+.checkbox:checked + label > .hamburger3 > .bar3 {
+    transform: rotate(45deg);
+    height: 3px;
+    background-color: transparent;
+}
+
+.checkbox:checked + label > .hamburger3 > .bar2 {
+    transform: rotate(-45deg);
+    height: 3px;
+    background-color: transparent;
+}
+
+.checkbox:checked + label > .hamburger3 > .bar4 {
+    transform: rotate(-45deg);
+    height: 3px;
+    width: 31px;
+}

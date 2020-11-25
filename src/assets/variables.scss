@@ -1,0 +1,31 @@
+$white: #FFFFFF;
+$black: #000000;
+$bg-grey: #C9C9C9;
+$bg-grey-f3: #F3F3F3;
+$bg-grey-48: #484848;
+$bg-grey-31: #313131;
+$bg-grey-87: #878787;
+$bg-grey-5d: #5D5D5D;
+$bg-grey-60: #606060;
+$rgba-grey: rgba(93, 93, 93, 0.5);
+$bg-yellow: #F1B666;
+$bg-light-grey-gradient: linear-gradient(0deg, rgba(135, 135, 135, 0.5), rgba(135, 135, 135, 0.5));
+$bg-grey-gradient: linear-gradient(0deg, rgba(49, 49, 49, 0.75), rgba(49, 49, 49, 0.75));
+
+%flex-wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+%flex-space {
+	display: flex;
+	justify-content: space-between;
+}
+
+%flex-wrap-space {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+$desktop-width: 1440px;
